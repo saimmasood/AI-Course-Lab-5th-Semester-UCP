@@ -6,6 +6,7 @@ c=a+b
 d=c.copy()
 d.sort()
 
+
 d.reverse()
 
 c[3]=42
@@ -23,4 +24,5 @@ for i in range(0,3):
 print("Last Element of D:",d[-1])
 
 print("Length of D:",len(d))
+
 
