@@ -55,3 +55,5 @@ def HCS_simple(start, goal):
 
 # Run the algorithm
 HCS_simple('A', 'F')
+
+
