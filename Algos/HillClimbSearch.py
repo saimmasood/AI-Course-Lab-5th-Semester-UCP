@@ -39,6 +39,10 @@ def HCS_simple(start, goal):
 
         # look at ALL neighbours and keep the one with the
         # smallest heuristic value
+
+        n=MyGraph[Node]
+
+        
         for child in MyGraph[Node]:
 
             if HeuristicVales[minH] > HeuristicVales[child]:
@@ -57,3 +61,19 @@ def HCS_simple(start, goal):
 HCS_simple('A', 'F')
 
 
+
+
+
+
+
+
+
+
+
+def hillClimb(start,goal):
+
+    node =start
+    path=[start]
+
+    queue=[]
+    que

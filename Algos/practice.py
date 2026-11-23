@@ -62,5 +62,28 @@ print("Total cost:")
 print(total_cost)
 
 
+
+
+
+
+def A(start, goal):
+    path=[start]
+    cost=0
+
+    queue=[]
+    queue.apppend((cost,path))
+
+
+    explored=[]
+
+    while queue:
+
+        minIndex=0
+
+        for i in range(0,len(queue)):
+            if queue[i][0]<queue[minIndex][0]:
+                minIndex=i
         
+
+
 

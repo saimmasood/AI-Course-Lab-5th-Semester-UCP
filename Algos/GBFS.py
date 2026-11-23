@@ -24,7 +24,7 @@ Heuristic = {
 def GBFS(startingNode, goal, myGraph):
     cost = 0
     path = [startingNode]
-    visited = []
+    explored = []
 
     queue = [(cost, path)]
 
@@ -40,21 +40,21 @@ def GBFS(startingNode, goal, myGraph):
 
         cost, path = queue.pop(minIndex)
 
-        last_visited = path[-1]
+        last_explored = path[-1]
 
-        if last_visited not in visited:
-            visited.append(last_visited)
+        if last_explored not in explored:
+            explored.append(last_explored)
 
-        if last_visited == goal:
-            print("Order of nodes added to the explored set:", visited)
+        if last_explored == goal:
+            print("Order of nodes added to the explored set:", explored)
             path.append(cost)
             return path
 
-        for child, edgeCost in myGraph[last_visited]:
+        for n, w in myGraph[last_explored]:
             newPath = list(path)
-            newPath.append(child)
+            newPath.append(n)
 
-            queue.append((cost + edgeCost, newPath))
+            queue.append((cost + w, newPath))
 
 
 print(GBFS('S', 'G', graph))

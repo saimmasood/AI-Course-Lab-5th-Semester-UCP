@@ -34,3 +34,4 @@ values = [3, 5, 2, 9]
 result = minimax(0, 0, True, values, -9999, 9999)
 
 print("Optimal value:", result)
+print("Alpha Beta pruning")
